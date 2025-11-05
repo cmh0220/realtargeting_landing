@@ -12,16 +12,18 @@
         font-family: system-ui, -apple-system, 'Segoe UI', Roboto;
       }
 
-      /* ✅ 메인 배경 이미지를 적용한 부분 */
+      /* ✅ 배경 이미지를 비율 유지하며 화면 전체에 꽉 차게 적용 */
       .wrap {
-        min-height: 100%;
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 32px;
         color: #fff;
-        background: url("https://realtargeting.s3.ap-northeast-2.amazonaws.com/belgium-6497401_1280.jpg") 
-                    no-repeat center center / cover;
+        background-image: url("https://realtargeting.s3.ap-northeast-2.amazonaws.com/belgium-6497401_1280.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
       }
 
       .card {
@@ -30,7 +32,7 @@
         text-align: center;
         border-radius: 20px;
         padding: 32px;
-        background: rgba(17, 24, 39, 0.85); /* 살짝 투명하게 (배경사진 비치도록) */
+        background: rgba(17, 24, 39, 0.85); /* 반투명 처리로 배경 사진 은은하게 */
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
       }
 
